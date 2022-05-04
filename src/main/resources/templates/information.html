@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+<h1>this is my information page</h1>
+<p th:text="${student1.studentName}">Student Name</p>
+<p th:text="${student1.studentContact}">Student Contact</p>
+<p th:text="${student1.studentEmail}">Student Email</p>
+<p th:text="${student1.studentCourse}">Student course</p>
+<p th:text="${student1.studentAddress}">Student Address</p>
+</section>
+
+</body>
+</html>

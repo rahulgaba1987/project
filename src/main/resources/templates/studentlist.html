@@ -1,0 +1,39 @@
+<!DOCTYPE html >
+<html  xmlns:th="http://www.thymeleaf.org"  th:replace="base1::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+
+<h1 class="text-center">Student List</h1>
+   <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+       <th scope="col">Name</th>
+       <th scope="col">Course</th>
+       <th scope="col">Address</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contact</th>
+            <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="student: ${student}">
+      <td th:text="${student.id}" scope="row"></td>
+      <td th:text="${student.studentName}" scope="row"></td>
+    <td th:text="${student.studentCourse}" scope="row"></td>
+       <td th:text="${student.studentAddress}" scope="row"></td>
+      <td th:text="${student.studentEmail}" scope="row"></td>
+       <td th:text="${student.studentContact}" scope="row"></td>
+      <td><a href="#"><button type="submit">Update</button></a><a href="#"><button type="submit">Delete</button></a></td>
+    </tr>
+    
+  </tbody>
+</table>
+</section>
+</body>
+</html>
